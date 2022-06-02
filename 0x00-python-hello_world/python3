@@ -1,0 +1,1 @@
+print(f"Best School: {99+10}")
