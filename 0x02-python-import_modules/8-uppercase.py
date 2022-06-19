@@ -7,3 +7,4 @@ def uppercase(str):
         else:
             new += char
     print("{:c}".format(new), end='')
+    print()
