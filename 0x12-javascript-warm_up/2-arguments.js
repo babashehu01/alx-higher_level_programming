@@ -8,7 +8,7 @@ else if (argV == 3)
 	console.log('Argument found');
 }
 else if (argV > 3) {
-	console.log('Arguments dound');
+	console.log('Arguments found');
 }
 else {
 	console.log('No argument found');
