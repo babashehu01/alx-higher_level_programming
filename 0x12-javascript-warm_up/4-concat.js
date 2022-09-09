@@ -1,6 +1,4 @@
 #!/usr/bin/node
-// prints to argValue with 'is'
-const argV = process.argv.length
-console.log(argV[3]);
-console.log(' Is ');
-console.log(argV[4]);
+// Script that prints the two argValue with 'is' concatenated
+console.log(`${process.argv[2]} is ${process.argv[3]}`);
+
