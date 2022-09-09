@@ -4,6 +4,6 @@ if (argV === 2) {
   console.log('No argument');
 } else if (argV === 3) {
   console.log('Argument found');
-} else (argV > 3) {
+} else {
   console.log('Arguments found');
 }
