@@ -3,12 +3,11 @@
 
 
 def __init__(self, size=0):
-    def __init__(self, size):
-        """Initialize a new square
-        Args:
-            size (int): Size of the new square
-        """
-        self.size = size
+    """Initialize a new square
+    Args:
+        size (int): Size of the new square
+    """
+    self.size = size
 
     @property
     def size(self):
