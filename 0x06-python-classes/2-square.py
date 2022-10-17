@@ -3,6 +3,7 @@
 
 
 class Sqaure:
+    """Intiatializes the class with size"""
     def __inti__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
