@@ -1,48 +1,54 @@
 #!/usr/bin/python3
-class Square:
-    """
-    Printing a square
-    """
-    def __init__(self, __size=0, position=(0, 0)):
-        self.__size = __size
-        self.position = position
-        if type(__size) is not int:
-            raise TypeError('size must be an integer')
-        if __size < 0:
-            raise ValueError('size must be >= 0')
+"""Defines a class Square"""
 
-    def area(self):
-        return (self.__size*self.__size)
+
+class Square:
+    """Represents a square"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialization of a new Square
+        Args:
+            size (int): size of the Square
+            position (tuple): position of the new Square
+        """
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        return self.__size
+        """Returns the value of the Size"""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
+        """Sets the value to size"""
         if type(value) is not int:
             raise TypeError('size must be an integer')
-        if value < 0:
+        elif value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
 
     @property
     def position(self):
-        return self.__position
+        """Return the position"""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        if type(value) is not tuple or len(value) is not 2:
+        """Sets the value of the positions"""
+        if type(value) is not tuple or len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        if type(value[0]) is not int or type(value[1]) is not int:
-            raise TypeError('position must be a tuple of 2 positive integers')
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError('position must be a tuple of 2 positive integers')
-        self.__position = value
+        else:
+            self.__position = value
+
+    def area(self):
+        """Returns the area of the square"""
+        return (self.__size ** 2)
 
     def my_print(self):
+        """prints in stdout the Square using #"""
         if self.__size == 0:
-            print()
+            print('')
         else:
             for i in range(0, self.__size):
-                print("#" * self.__size)
+                print(' ' * self.__position[0], '#' * self.__size)
