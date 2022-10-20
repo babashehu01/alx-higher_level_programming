@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Represents a Rectangle'''
+'''Represents a class Rectangle'''
 
 
 class Rectangle:
@@ -10,49 +10,48 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __strr__(self):
-        '''representation of the class Rectangle'''
-        if self.__width == 0 or self.__height == 0:
-            return ''
-        for i in range(4):
-            return("Iteration {:d}".format(i))
-
     @property
     def width(self):
-        '''returns the value of width'''
+        '''returns the value of Width'''
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''sets the value of width'''
+        '''sets the value of Width'''
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
-            raise ValueError('width must be <= 0')
+            raise ValueError('width must >= 0')
         self.__width = value
 
     @property
     def height(self):
-        '''returns the value of height'''
+        '''returns the value of Height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''sets the height of the Rectangle'''
+        '''sets the value of height'''
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value < 0:
-            raise ValueError('heght must be <= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
-        '''returns the area of the rectangke'''
+        '''return the area of the Rectangle'''
         return (self.__width * self.__height)
 
     def perimeter(self):
-        '''return the perimeter of the rectangle'''
+        '''return the perimeter of the Rectangle'''
         if self.__width == 0 or self.__height == 0:
             return 0
-        else:
-            perimeter = (2 * (self.__height + self.__width))
-            return perimeter
+        perimeter = (2 * (self.__width + self.__height))
+        return perimeter
+
+    def __repr__(self):
+        for i in range(self.__height):
+            print("iteration {}".format(i))
+        if self.__width == 0 or self.__height == 0:
+            return ''
+        return '#'
