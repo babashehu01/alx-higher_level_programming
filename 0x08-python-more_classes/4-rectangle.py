@@ -49,9 +49,17 @@ class Rectangle:
         perimeter = (2 * (self.__width + self.__height))
         return perimeter
 
-    def __repr__(self):
-        for i in range(self.__height):
-            print("iteration {}".format(i))
+    def __str__(self):
+        '''string representation of Rectangle'''
         if self.__width == 0 or self.__height == 0:
             return ''
-        return '#'
+        strpr = ''
+        for i in range(self.__height):
+            strpr += ('#' * self.__width)
+            if i != self.__height - 1:
+                strpr += '\n'
+        return strpr
+
+    def __repr__(self):
+        '''class representantion of Rectangle'''
+        return ('Rectangle({}, {})'.format(self.__width, self.__height))
