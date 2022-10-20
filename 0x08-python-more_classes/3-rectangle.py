@@ -1,25 +1,18 @@
 #!/usr/bin/python3
-'''Represents a Rectangle'''
+'''Defines a class Rectangle'''
 
 
 class Rectangle:
     '''Defines a Rectangle'''
 
     def __init__(self, width=0, height=0):
-        '''initializes a new Rectangle'''
+        '''initializes a new rectangle'''
         self.width = width
         self.height = height
 
-    def __strr__(self):
-        '''representation of the class Rectangle'''
-        if self.__width == 0 or self.__height == 0:
-            return ''
-        for i in range(4):
-            return("Iteration {:d}".format(i))
-
     @property
     def width(self):
-        '''returns the value of width'''
+        '''returns the width'''
         return self.__width
 
     @width.setter
@@ -28,31 +21,36 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
-            raise ValueError('width must be <= 0')
+            raise ValueError('width must be >= 0')
         self.__width = value
 
     @property
     def height(self):
-        '''returns the value of height'''
+        '''return the height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''sets the height of the Rectangle'''
+        '''sets the value of height'''
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value < 0:
-            raise ValueError('heght must be <= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
-        '''returns the area of the rectangke'''
-        return (self.__width * self.__height)
+        '''returns the area of the Rectangle'''
+        return self.__height * self.__width
 
     def perimeter(self):
-        '''return the perimeter of the rectangle'''
+        '''returns the perimeter of the Recctangle'''
         if self.__width == 0 or self.__height == 0:
             return 0
-        else:
-            perimeter = (2 * (self.__height + self.__width))
-            return perimeter
+        return  (2 * (self.__width + self.__height))
+
+    def __str__(self):
+        '''repr representation of Rectangle'''
+        strp = ''
+        for i in range(self.__height):
+            strp += ('#' * self.__width) + '\n'
+        return strp
