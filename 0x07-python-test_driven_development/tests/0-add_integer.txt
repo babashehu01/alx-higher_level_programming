@@ -23,7 +23,7 @@ Adding intger and any non integer or float
 	>>> add_integer(2, 'p')
 	Traceback (most recent call last):
 		...
-	TypeError: b must be integer
+	TypeError: b must be an integer
 
 Passing a single integer, takes it as `a` and makes b=98
 	>>> add_integer(2)
