@@ -10,7 +10,22 @@ Import the function from the module:
 
 Now use it:
 
-Testing for all integers
+Testing empty list:
+	>>> my_list = MyList()
+	>>> print(my_list)
+	[]
+	>>> my_list.print_sorted()
+	[]
+
+Testing single integer list:
+	>>> my_list = MyList()
+	>>> my_list.append(2)
+	>>> print(my_list)
+	[2]
+	>>> my_list.print_sorted()
+	[2]
+
+Testing for all integers:
 	>>> my_list = MyList()
 	>>> my_list.extend([1, 6, 3, 7, 9, 2])
 	>>> my_list
@@ -20,7 +35,7 @@ Testing for all integers
 	>>> print(my_list)
 	[1, 6, 3, 7, 9, 2]
 
-Testing for integers and floats
+Testing for integers and floats:
 	>>> my_list = MyList()
 	>>> my_list.extend([1, 1.5, 5, 2.3, 4, 3.8])
 	>>> print(my_list)
@@ -28,7 +43,7 @@ Testing for integers and floats
 	>>> my_list.print_sorted()
 	[1, 1.5, 2.3, 3.8, 4, 5]
 
-Testing for integers and string
+Testing for integers and string:
 	>>> my_List3 = MyList()
 	>>> my_List3.extend(['d', 'b', 'a', 'c'])
 	>>> print(my_List3)
@@ -36,7 +51,7 @@ Testing for integers and string
 	>>> my_List3.print_sorted()
 	['a', 'b', 'c', 'd']
 
-Testing for all characters
+Testing for all characters:
 	>>> my_list2 = MyList()
 	>>> my_list2.extend([9, 4, 6, 7, "a", 2, "j"])
 	>>> print(my_list2)
@@ -46,7 +61,7 @@ Testing for all characters
 		...
 	TypeError: '<' not supported between instances of 'str' and 'int'
 
-Testing for charcters and string
+Testing for charcters and string:
 	>>> my_list = MyList()
 	>>> my_list.extend(['d', 'c', 'ab', 'e'])
 	>>> print(my_list)
