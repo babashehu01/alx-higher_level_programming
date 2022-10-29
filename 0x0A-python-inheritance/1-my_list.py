@@ -5,7 +5,7 @@ Deines `MyList` class
 
 
 class MyList(list):
-    """ 
+    """
     Represents a list
     """
     def print_sorted(self):
