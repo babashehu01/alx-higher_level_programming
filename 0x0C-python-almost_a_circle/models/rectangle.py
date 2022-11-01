@@ -17,10 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        ''' gets/returns the value of width '''
         return self.__width
 
     @width.setter
     def width(self, value):
+        ''' sets the value of width '''
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value <= 0:
@@ -29,10 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        ''' gets/returns the value of height '''
         return self.__height
 
     @height.setter
     def height(self, value):
+        ''' sets/asssigns the value of height '''
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value <= 0:
@@ -41,10 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        ''' gets/returns the value of x '''
         return self.__x
 
     @x.setter
     def x(self, value):
+        ''' sets/assigns the value of x '''
         if type(value) is not int:
             raise TypeError('x must be an integer')
         elif value < 0:
@@ -53,10 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        ''' gets/returns the value of y '''
         return self.__y
 
     @y.setter
     def y(self, value):
+        ''' sets/assigns the value of y'''
         if type(value) is not int:
             raise TypeError('y must be an integer')
         elif value < 0:
@@ -83,6 +91,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
+        ''' Update '''
         if len(args) is not 0:
             if len(args) >= 1:
                 self.id = args[0]
