@@ -92,7 +92,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         ''' Update '''
-        if len(args) is not 0:
+        if len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -115,3 +115,8 @@ class Rectangle(Base):
                     self.__x = value
                 if key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        ''' returns the dictionary representation of a Rectangle '''
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
