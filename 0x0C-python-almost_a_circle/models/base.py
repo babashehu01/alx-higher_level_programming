@@ -35,7 +35,7 @@ class Base:
         of list_objs to a file '''
         filename = cls.__name__ + '.json'
         lists = []
-        with open (filename, mode='w') as file:
+        with open(filename, mode='w') as file:
             if list_objs is None:
                 file.write('[]')
             else:
