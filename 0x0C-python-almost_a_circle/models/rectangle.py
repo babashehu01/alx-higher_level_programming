@@ -78,13 +78,12 @@ class Rectangle(Base):
 
     def display(self):
         ''' prints the Rectangle instance with the character # '''
-        rect = ''
-        for i in range(self.__height):
-            if i == self.__height - 1:
-                rect += '#' * self.__width
-            else:
-                rect += '#' * self.__width + '\n'
-        print(rect)
+        rectangle = self.y * "\n"
+        for i in range(self.height):
+            rectangle += (" " * self.x)
+            rectangle += ("#" * self.width) + "\n"
+
+        print(rectangle, end='')
 
     def __str__(self):
         ''' string representation of rectangle '''
