@@ -46,10 +46,10 @@ class Base:
         if list_objs is None:
             return []
         for lists in list_objs:
-            dics += lists.to_dictionary()
+            dics.append(lists.to_dictionary())
 
-        with open(filename, w) as file:
-            file.write(to_json_string(dics))
+        with open(filename, mode='w') as file:
+            file.write(Base.to_json_string(dics))
 
     def from_json_string(json_string):
         ''' from json to dic '''
