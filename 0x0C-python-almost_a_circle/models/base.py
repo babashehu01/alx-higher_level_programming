@@ -44,3 +44,9 @@ class Base:
             dic = cls.to_json_string(lists)
 
             file.write(dic)
+
+    def from_json_string(json_string):
+        ''' from json to dic '''
+        if json_string is None or json_string == '[]':
+            return '[]'
+        return json.loads(json_string)
