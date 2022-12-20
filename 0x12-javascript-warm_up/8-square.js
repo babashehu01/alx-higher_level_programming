@@ -10,3 +10,4 @@ if (Number.isNaN(squareSize)) {
     }
     console.log(sqr);
   }
+  }
