@@ -5,9 +5,9 @@ if (Number.isNaN(squareSize)) {
 } else {
   for (let i = 0; i < squareSize; i++) {
     let sqr = '';
-    for(let j = 0; j < squareSize; j++) {
+    for (let j = 0; j < squareSize; j++) {
       sqr += 'X';
     }
     console.log(sqr);
   }
-  }
+}
