@@ -1,18 +1,20 @@
 #!/usr/bin/node
-function search () {
-  args = [];
-  for (let i = 0; i === i; i++) {
-    if (parseInt(process.argv[i]) !== undefined) {
-      args.push(parseInt(process.argv[i]));
-    } else {
-      break;
-    }
-  }
-  if (!process.argv[2]) {
-    console.log(0);
-  } else {
-    console.log(process.argv[2]);
+
+let biggest = 0;
+let i;
+const arrayNumbers = [];
+
+for (i = 2; i < process.argv.length; i++) {
+  if (Number.isNaN(parseInt(process.argv[i])) === false) {
+    arrayNumbers[i - 2] = parseInt(process.argv[i]);
   }
 }
 
-search()
+if (arrayNumbers.length > 1) {
+  biggest = Math.max.apply(null, arrayNumbers);
+  i = arrayNumbers.indexOf(biggest);
+  arrayNumbers[i] = -Infinity;
+  biggest = Math.max.apply(null, arrayNumbers);
+}
+
+console.log(biggest);
