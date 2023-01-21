@@ -3,4 +3,7 @@
 import urllib.request
 import sys
 
-print(sys.argv[1])
+if __name__ == '__main__':
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        page = response.read()
+    print(response.headers.get('X-Request-Id', ))
