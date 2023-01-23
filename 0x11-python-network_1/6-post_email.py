@@ -12,3 +12,5 @@ if __name__ == '__main__':
     value = {'email': email}
 
     r = requests.post(url, value)
+
+    print(r.text)
